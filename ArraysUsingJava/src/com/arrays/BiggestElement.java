@@ -4,7 +4,7 @@ public class BiggestElement
 {
 	public static Integer greatestElement(Integer arr[])
 	{
-		int max = 0;
+		int max = Integer.MIN_VALUE;
 		for(int i=0;i<arr.length;i++)
 		{
 			if(arr[i] > max)
