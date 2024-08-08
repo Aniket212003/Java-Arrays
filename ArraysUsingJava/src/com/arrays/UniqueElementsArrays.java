@@ -1,19 +1,23 @@
 package com.arrays;
 
+import java.util.Arrays;
+
 public class UniqueElementsArrays 
 {
 	public static void uniqueElements(int arr[])
 	{
+		int[] unique = new int[arr.length];
 		for(int i=0;i<arr.length;i++)
 		{
-			while(i < arr.length-1 && arr[i] == arr[i+1])
+			for(int j=0;j<i;j++)
 			{
-				i++;
-				System.out.print(arr[i]+ " ");
+				if(arr[i]==arr[j])
+				{
+					unique[i] = arr[i];
+				}
 			}
-			
-			
 		}
+		System.out.println("Unique Elements : " + Arrays.toString(unique));
 	}
 	public static void main(String[] args) 
 	{
